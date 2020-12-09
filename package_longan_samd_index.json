@@ -65,43 +65,43 @@
           [
             {
               "host": "i686-mingw32",
-              "url": "https://github.com/deezums/ArduinoModule-CMSIS-Atmel/releases/download/v1.2.1/CMSIS-Atmel-1.2.1.tar.bz2",
-              "archiveFileName": "CMSIS-Atmel-1.2.1-deezums.tar.bz2",
+              "url": "https://github.com/Longan-Labs/LONGAN-SAME-TOOLS/raw/master/CMSIS-Atmel-1.2.1.tar.bz2",
+              "archiveFileName": "CMSIS-Atmel-1.2.1.tar.bz2",
               "checksum": "SHA-256:4efe2157f7cc062dfb67ac8aa533accc590a392fe0d05fd4b2fba1b6ea1db324",
               "size": "2380531"
             },
             {
               "host": "x86_64-apple-darwin",
-              "url": "https://github.com/deezums/ArduinoModule-CMSIS-Atmel/releases/download/v1.2.1/CMSIS-Atmel-1.2.1.tar.bz2",
-              "archiveFileName": "CMSIS-Atmel-1.2.1-deezums.tar.bz2",
+              "url": "https://github.com/Longan-Labs/LONGAN-SAME-TOOLS/raw/master/CMSIS-Atmel-1.2.1.tar.bz2",
+              "archiveFileName": "CMSIS-Atmel-1.2.1.tar.bz2",
               "checksum": "SHA-256:4efe2157f7cc062dfb67ac8aa533accc590a392fe0d05fd4b2fba1b6ea1db324",
               "size": "2380531"
             },
             {
               "host": "x86_64-pc-linux-gnu",
-              "url": "https://github.com/deezums/ArduinoModule-CMSIS-Atmel/releases/download/v1.2.1/CMSIS-Atmel-1.2.1.tar.bz2",
-              "archiveFileName": "CMSIS-Atmel-1.2.1-deezums.tar.bz2",
+              "url": "https://github.com/Longan-Labs/LONGAN-SAME-TOOLS/raw/master/CMSIS-Atmel-1.2.1.tar.bz2",
+              "archiveFileName": "CMSIS-Atmel-1.2.1.tar.bz2",
               "checksum": "SHA-256:4efe2157f7cc062dfb67ac8aa533accc590a392fe0d05fd4b2fba1b6ea1db324",
               "size": "2380531"
             },
             {
               "host": "i686-pc-linux-gnu",
-              "url": "https://github.com/deezums/ArduinoModule-CMSIS-Atmel/releases/download/v1.2.1/CMSIS-Atmel-1.2.1.tar.bz2",
-              "archiveFileName": "CMSIS-Atmel-1.2.1-deezums.tar.bz2",
+              "url": "https://github.com/Longan-Labs/LONGAN-SAME-TOOLS/raw/master/CMSIS-Atmel-1.2.1.tar.bz2",
+              "archiveFileName": "CMSIS-Atmel-1.2.1.tar.bz2",
               "checksum": "SHA-256:4efe2157f7cc062dfb67ac8aa533accc590a392fe0d05fd4b2fba1b6ea1db324",
               "size": "2380531"
             },
             {
               "host": "arm-linux-gnueabihf",
-              "url": "https://github.com/deezums/ArduinoModule-CMSIS-Atmel/releases/download/v1.2.1/CMSIS-Atmel-1.2.1.tar.bz2",
-              "archiveFileName": "CMSIS-Atmel-1.2.1-deezums.tar.bz2",
+              "url": "https://github.com/Longan-Labs/LONGAN-SAME-TOOLS/raw/master/CMSIS-Atmel-1.2.1.tar.bz2",
+              "archiveFileName": "CMSIS-Atmel-1.2.1.tar.bz2",
               "checksum": "SHA-256:4efe2157f7cc062dfb67ac8aa533accc590a392fe0d05fd4b2fba1b6ea1db324",
               "size": "2380531"
             },
             {
               "host": "all",
-              "url": "https://github.com/deezums/ArduinoModule-CMSIS-Atmel/releases/download/v1.2.1/CMSIS-Atmel-1.2.1.tar.bz2",
-              "archiveFileName": "CMSIS-Atmel-1.2.1-deezums.tar.bz2",
+              "url": "https://github.com/Longan-Labs/LONGAN-SAME-TOOLS/raw/master/CMSIS-Atmel-1.2.1.tar.bz2",
+              "archiveFileName": "CMSIS-Atmel-1.2.1.tar.bz2",
               "checksum": "SHA-256:4efe2157f7cc062dfb67ac8aa533accc590a392fe0d05fd4b2fba1b6ea1db324",
               "size": "2380531"
             }
@@ -113,7 +113,7 @@
           "systems": [
             {
               "host": "i686-mingw32",
-              "url": "https://github.com/deezums/BOSSA/releases/download/1.9.2/bossac-1.9.2-arduino-windows.tar.gz",
+              "url": "https://github.com/Longan-Labs/LONGAN-SAME-TOOLS/raw/master/bossac-1.9.2-arduino-windows.tar.gz",
               "archiveFileName": "bossac-1.9.2-arduino-windows.tar.gz",
               "checksum": "SHA-256:2E3B45770A81052FDFC4681CAEE3A923637C908EED6663C9C9B40B32C5158225",
               "size": "115647"
@@ -216,10 +216,10 @@
           "architecture": "samd",
           "version": "1.0.0",
           "category": "Longan-Labs",
-          "url": "https://github.com/deezums/ArduinoCore-same/releases/download/1.0.0/ArduinoCore-same-1.0.0.tar.bz2",
-          "archiveFileName": "ArduinoCore-same-1.0.0.tar.bz2",
-          "checksum": "SHA-256:AB1854B925987490DDE243152B3B3B9F94D69C9B605233641AF066AF6208779D",
-          "size": "868818",
+          "url": "https://github.com/Longan-Labs/LONGAN-SAME-TOOLS/raw/master/ArduinoCore-same.tar.bz2",
+          "archiveFileName": "ArduinoCore-same.tar.bz2",
+          "checksum": "SHA-256:0f99b01982bd10ed1bbdd99268f36b0f09c85ca4075e212d85e3381d819df1d7",
+          "size": "4348756",
           "help": {
             "online": "https://www.longan-labs.cc/"
           },
