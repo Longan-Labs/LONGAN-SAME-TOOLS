@@ -1,7 +1,7 @@
 {
   "packages": [
     {
-      "websiteURL": "https://github.com/Longan-Labs",
+      "websiteURL": "https://github.com/Longan-labs",
       "tools": [
         {
           "name": "CMSIS",
@@ -10,49 +10,49 @@
             {
               "host": "i686-mingw32",
               "url": "https://github.com/ARM-software/CMSIS_5/archive/5.4.0.tar.gz",
-              "archiveFileName": "CMSIS_5-5.4.0-deezums.tar.gz",
+              "archiveFileName": "CMSIS_5-5.4.0-Longan.tar.gz",
               "checksum": "SHA-256:93d09907ceb23a520ef65e6b5014d2e866efa6b7f5fe5d8828b29bbc54dec697",
               "size": "153772853"
             },
             {
               "host": "x86_64-apple-darwin",
               "url": "https://github.com/ARM-software/CMSIS_5/archive/5.4.0.tar.gz",
-              "archiveFileName": "CMSIS_5-5.4.0-deezums.tar.gz",
+              "archiveFileName": "CMSIS_5-5.4.0-Longan.tar.gz",
               "checksum": "SHA-256:93d09907ceb23a520ef65e6b5014d2e866efa6b7f5fe5d8828b29bbc54dec697",
               "size": "153772853"
             },
             {
               "host": "x86_64-pc-linux-gnu",
               "url": "https://github.com/ARM-software/CMSIS_5/archive/5.4.0.tar.gz",
-              "archiveFileName": "CMSIS_5-5.4.0-deezums.tar.gz",
+              "archiveFileName": "CMSIS_5-5.4.0-Longan.tar.gz",
               "checksum": "SHA-256:93d09907ceb23a520ef65e6b5014d2e866efa6b7f5fe5d8828b29bbc54dec697",
               "size": "153772853"
             },
             {
               "host": "i686-pc-linux-gnu",
               "url": "https://github.com/ARM-software/CMSIS_5/archive/5.4.0.tar.gz",
-              "archiveFileName": "CMSIS_5-5.4.0-deezums.tar.gz",
+              "archiveFileName": "CMSIS_5-5.4.0-Longan.tar.gz",
               "checksum": "SHA-256:93d09907ceb23a520ef65e6b5014d2e866efa6b7f5fe5d8828b29bbc54dec697",
               "size": "153772853"
             },
             {
               "host": "arm-linux-gnueabihf",
               "url": "https://github.com/ARM-software/CMSIS_5/archive/5.4.0.tar.gz",
-              "archiveFileName": "CMSIS_5-5.4.0-deezums.tar.gz",
+              "archiveFileName": "CMSIS_5-5.4.0-Longan.tar.gz",
               "checksum": "SHA-256:93d09907ceb23a520ef65e6b5014d2e866efa6b7f5fe5d8828b29bbc54dec697",
               "size": "153772853"
             },
             {
               "host": "aarch64-linux-gnu",
               "url": "https://github.com/ARM-software/CMSIS_5/archive/5.4.0.tar.gz",
-              "archiveFileName": "CMSIS_5-5.4.0-deezums.tar.gz",
+              "archiveFileName": "CMSIS_5-5.4.0-Longan.tar.gz",
               "checksum": "SHA-256:93d09907ceb23a520ef65e6b5014d2e866efa6b7f5fe5d8828b29bbc54dec697",
               "size": "153772853"
             },
             {
               "host": "all",
               "url": "https://github.com/ARM-software/CMSIS_5/archive/5.4.0.tar.gz",
-              "archiveFileName": "CMSIS_5-5.4.0-deezums.tar.gz",
+              "archiveFileName": "CMSIS_5-5.4.0-Longan.tar.gz",
               "checksum": "SHA-256:93d09907ceb23a520ef65e6b5014d2e866efa6b7f5fe5d8828b29bbc54dec697",
               "size": "153772853"
             }
@@ -66,42 +66,42 @@
             {
               "host": "i686-mingw32",
               "url": "https://github.com/Longan-Labs/LONGAN-SAME-TOOLS/raw/master/CMSIS-Atmel-1.2.1.tar.bz2",
-              "archiveFileName": "CMSIS-Atmel-1.2.1.tar.bz2",
+              "archiveFileName": "CMSIS-Atmel-1.2.1-Longan.tar.bz2",
               "checksum": "SHA-256:4efe2157f7cc062dfb67ac8aa533accc590a392fe0d05fd4b2fba1b6ea1db324",
               "size": "2380531"
             },
             {
               "host": "x86_64-apple-darwin",
               "url": "https://github.com/Longan-Labs/LONGAN-SAME-TOOLS/raw/master/CMSIS-Atmel-1.2.1.tar.bz2",
-              "archiveFileName": "CMSIS-Atmel-1.2.1.tar.bz2",
+              "archiveFileName": "CMSIS-Atmel-1.2.1-Longan.tar.bz2",
               "checksum": "SHA-256:4efe2157f7cc062dfb67ac8aa533accc590a392fe0d05fd4b2fba1b6ea1db324",
               "size": "2380531"
             },
             {
               "host": "x86_64-pc-linux-gnu",
               "url": "https://github.com/Longan-Labs/LONGAN-SAME-TOOLS/raw/master/CMSIS-Atmel-1.2.1.tar.bz2",
-              "archiveFileName": "CMSIS-Atmel-1.2.1.tar.bz2",
+              "archiveFileName": "CMSIS-Atmel-1.2.1-Longan.tar.bz2",
               "checksum": "SHA-256:4efe2157f7cc062dfb67ac8aa533accc590a392fe0d05fd4b2fba1b6ea1db324",
               "size": "2380531"
             },
             {
               "host": "i686-pc-linux-gnu",
               "url": "https://github.com/Longan-Labs/LONGAN-SAME-TOOLS/raw/master/CMSIS-Atmel-1.2.1.tar.bz2",
-              "archiveFileName": "CMSIS-Atmel-1.2.1.tar.bz2",
+              "archiveFileName": "CMSIS-Atmel-1.2.1-Longan.tar.bz2",
               "checksum": "SHA-256:4efe2157f7cc062dfb67ac8aa533accc590a392fe0d05fd4b2fba1b6ea1db324",
               "size": "2380531"
             },
             {
               "host": "arm-linux-gnueabihf",
               "url": "https://github.com/Longan-Labs/LONGAN-SAME-TOOLS/raw/master/CMSIS-Atmel-1.2.1.tar.bz2",
-              "archiveFileName": "CMSIS-Atmel-1.2.1.tar.bz2",
+              "archiveFileName": "CMSIS-Atmel-1.2.1-Longan.tar.bz2",
               "checksum": "SHA-256:4efe2157f7cc062dfb67ac8aa533accc590a392fe0d05fd4b2fba1b6ea1db324",
               "size": "2380531"
             },
             {
               "host": "all",
               "url": "https://github.com/Longan-Labs/LONGAN-SAME-TOOLS/raw/master/CMSIS-Atmel-1.2.1.tar.bz2",
-              "archiveFileName": "CMSIS-Atmel-1.2.1.tar.bz2",
+              "archiveFileName": "CMSIS-Atmel-1.2.1-Longan.tar.bz2",
               "checksum": "SHA-256:4efe2157f7cc062dfb67ac8aa533accc590a392fe0d05fd4b2fba1b6ea1db324",
               "size": "2380531"
             }
@@ -204,38 +204,38 @@
           ]
         }
       ],
-      "name": "Longan-Labs",
+      "name": "Longan",
       "email": "info@longan-labs.cc",
       "help": {
         "online": "https://github.com/Longan-Labs"
       },
-      "maintainer": "Longan-Labs",
+      "maintainer": "Longan Labs",
       "platforms": [
         {
-          "name": "LONGAN SAMD",
+          "name": "Longan Labs SAME Boards",
           "architecture": "samd",
           "version": "1.0.0",
-          "category": "Longan-Labs",
+          "category": "Longan Labs",
           "url": "https://github.com/Longan-Labs/LONGAN-SAME-TOOLS/raw/master/ArduinoCore-same.tar.bz2",
-          "archiveFileName": "ArduinoCore-same.tar.bz2",
+          "archiveFileName": "ArduinoCore-same-1.0.0.tar.bz2",
           "checksum": "SHA-256:0f99b01982bd10ed1bbdd99268f36b0f09c85ca4075e212d85e3381d819df1d7",
           "size": "4348756",
           "help": {
-            "online": "https://www.longan-labs.cc/"
+            "online": "https://github.com/Longan-Labs"
           },
           "boards": [
             {
-              "name": "CANBed M4"
+              "name": "SAME51G19A M4"
             }
           ],
           "toolsDependencies": [
             {
-              "packager": "Longan_SAMD",
+              "packager": "Longan",
               "name": "arm-none-eabi-gcc",
               "version": "9-2019q4"
             },
             {
-              "packager": "Longan_SAMD",
+              "packager": "Longan",
               "name": "bossac",
               "version": "1.9.2"
             },
@@ -245,12 +245,12 @@
               "version": "0.10.0-arduino7"
             },
             {
-              "packager": "Longan_SAMD",
+              "packager": "Longan",
               "name": "CMSIS",
               "version": "5.4.0"
             },
             {
-              "packager": "Longan_SAMD",
+              "packager": "Longan",
               "name": "CMSIS-Atmel",
               "version": "1.2.1"
             },
