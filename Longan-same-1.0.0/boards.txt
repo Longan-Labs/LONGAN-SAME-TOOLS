@@ -1,0 +1,83 @@
+# Copyright (c) 2014-2015 Arduino LLC.  All right reserved.
+#
+# This library is free software; you can redistribute it and/or
+# modify it under the terms of the GNU Lesser General Public
+# License as published by the Free Software Foundation; either
+# version 2.1 of the License, or (at your option) any later version.
+#
+# This library is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+# See the GNU Lesser General Public License for more details.
+#
+# You should have received a copy of the GNU Lesser General Public
+# License along with this library; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+
+menu.cache=Cache
+menu.speed=CPU Speed
+menu.opt=Optimize
+menu.maxqspi=Max QSPI
+menu.usbstack=USB Stack
+menu.debug=Debug
+
+# CANBed M4 (SAME51G19A)
+# ------------------------------
+CANBED_M4.name=CANBed M4 (SAME51G19A)
+CANBED_M4.vid.0=0x03EB
+CANBED_M4.pid.0=0x802B
+CANBED_M4.vid.1=0x03EB
+CANBED_M4.pid.1=0x002B
+CANBED_M4.upload.tool=bossac19
+CANBED_M4.upload.protocol=sam-ba
+CANBED_M4.upload.maximum_size=507904
+CANBED_M4.upload.offset=0x4000
+CANBED_M4.upload.use_1200bps_touch=true
+CANBED_M4.upload.wait_for_upload_port=true
+CANBED_M4.upload.native_usb=true
+CANBED_M4.build.mcu=cortex-m4
+#CANBED_M4.build.f_cpu=120000000L
+CANBED_M4.build.usb_product="CANBed M4 (SAME51G19A)"
+CANBED_M4.build.usb_manufacturer="Longan-Labs"
+CANBED_M4.build.board=SAME51G19A_M4
+CANBED_M4.build.core=arduino
+CANBED_M4.build.extra_flags=-D__SAME51G19A__ -DDEEZUMS_DEEZIGNS_SAME51G19A_M4_EXPRESS -D__SAMD51__ {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4 -DCRYSTALLESS -mfloat-abi=hard -mfpu=fpv4-sp-d16
+CANBED_M4.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+CANBED_M4.build.openocdscript=openocd_scripts/arduino_zero.cfg
+CANBED_M4.build.variant=SAME51G19A_M4
+CANBED_M4.build.variant_system_lib=
+CANBED_M4.build.vid=0x03EB
+CANBED_M4.build.pid=0x802B
+CANBED_M4.bootloader.tool=openocd
+CANBED_M4.bootloader.file=canbed_m4/bootloader_canbed_atsame51g19a.bin
+CANBED_M4.compiler.arm.cmsis.ldflags="-L{runtime.tools.CMSIS-5.4.0.path}/CMSIS/Lib/GCC/" "-L{build.variant.path}" -larm_cortexM4lf_math -mfloat-abi=hard -mfpu=fpv4-sp-d16
+CANBED_M4.menu.cache.on=Enabled
+CANBED_M4.menu.cache.on.build.cache_flags=-DENABLE_CACHE
+CANBED_M4.menu.cache.off=Disabled
+CANBED_M4.menu.cache.off.build.cache_flags=
+CANBED_M4.menu.speed.120=120 MHz (standard)
+CANBED_M4.menu.speed.120.build.f_cpu=120000000L
+CANBED_M4.menu.speed.150=150 MHz (overclock)
+CANBED_M4.menu.speed.150.build.f_cpu=150000000L
+CANBED_M4.menu.speed.180=180 MHz (overclock)
+CANBED_M4.menu.speed.180.build.f_cpu=180000000L
+CANBED_M4.menu.speed.200=200 MHz (overclock)
+CANBED_M4.menu.speed.200.build.f_cpu=200000000L
+CANBED_M4.menu.opt.small=Small (-Os) (standard)
+CANBED_M4.menu.opt.small.build.flags.optimize=-Os
+CANBED_M4.menu.opt.fast=Fast (-O2)
+CANBED_M4.menu.opt.fast.build.flags.optimize=-O2
+CANBED_M4.menu.opt.faster=Faster (-O3)
+CANBED_M4.menu.opt.faster.build.flags.optimize=-O3
+CANBED_M4.menu.opt.fastest=Fastest (-Ofast)
+CANBED_M4.menu.opt.fastest.build.flags.optimize=-Ofast
+CANBED_M4.menu.opt.dragons=Eleven (-Ofast -funroll-loops)
+CANBED_M4.menu.opt.dragons.build.flags.optimize=-Ofast -funroll-loops
+CANBED_M4.menu.maxqspi.50=50 MHz (standard)
+CANBED_M4.menu.maxqspi.50.build.flags.maxqspi=-DVARIANT_QSPI_BAUD_DEFAULT=50000000
+CANBED_M4.menu.maxqspi.fcpu=CPU Speed / 2
+CANBED_M4.menu.maxqspi.fcpu.build.flags.maxqspi=-DVARIANT_QSPI_BAUD_DEFAULT=({build.f_cpu})
+CANBED_M4.menu.debug.off=Off
+CANBED_M4.menu.debug.on=On
+CANBED_M4.menu.debug.on.build.flags.debug=-g
+
