@@ -218,8 +218,8 @@
           "category": "Longan Labs",
           "url": "https://github.com/Longan-Labs/LONGAN-SAME-TOOLS/raw/master/ArduinoCore-same-1.0.0.tar.bz2",
           "archiveFileName": "ArduinoCore-same-1.0.0.tar.bz2",
-          "checksum": "SHA-256:0fc58a7462dba8e134064e2486db381f09f6d7d64fdb8b43414e2320fa3a572e",
-          "size": "954249",
+          "checksum": "SHA-256:fc82b224baa9eca8b7de61e891fb22da52c933036fca9fc3d33ccae346f5f480",
+          "size": "948230",
           "help": {
             "online": "https://github.com/Longan-Labs"
           },

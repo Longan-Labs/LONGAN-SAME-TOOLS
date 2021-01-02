@@ -417,7 +417,7 @@ void analogWrite(uint32_t pin, uint32_t value)
 
 #if defined(__SAMD51__)
 
-	    value = mapResolution(value, _writeResolution, _dacResolution);
+            value = mapResolution(value, _writeResolution, _dacResolution);
 
 
 			uint8_t channel = (pin == PIN_DAC0 ? 0 : 1);
