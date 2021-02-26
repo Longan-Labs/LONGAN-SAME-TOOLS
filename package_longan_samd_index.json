@@ -310,6 +310,56 @@
               "version": "1.2.1"
             }
           ]
+        },
+        {
+          "name": "Longan Labs SAME Boards",
+          "architecture": "samd",
+          "version": "1.0.2",
+          "category": "Longan Labs",
+          "url": "https://github.com/Longan-Labs/LONGAN-SAME-TOOLS/raw/master/ArduinoCore-same-1.0.2.tar.bz2",
+          "archiveFileName": "ArduinoCore-same-1.0.2.tar.bz2",
+          "checksum": "SHA-256:cbf5f4e74d50a30b4aa16ccc51ce5a43829b6772fbbc8793a64a38f96dffdcc1",
+          "size": "1020261",
+          "help": {
+            "online": "https://github.com/Longan-Labs"
+          },
+          "boards": [
+            {
+              "name": "SAME51G19A M4"
+            }
+          ],
+          "toolsDependencies": [
+            {
+              "packager": "Longan",
+              "name": "arm-none-eabi-gcc",
+              "version": "9-2019q4"
+            },
+            {
+              "packager": "Longan",
+              "name": "bossac",
+              "version": "1.9.2"
+            },
+            {
+              "packager": "arduino",
+              "name": "openocd",
+              "version": "0.10.0-arduino7"
+            },
+            {
+              "packager": "Longan",
+              "name": "CMSIS",
+              "version": "5.4.0"
+            },
+            {
+              "packager": "Longan",
+              "name": "CMSIS-Atmel",
+              "version": "1.2.1"
+            },
+            {
+              "packager": "arduino",
+              "name": "arduinoOTA",
+              "version": "1.2.1"
+            }
+          ]
         }
       ]
     }

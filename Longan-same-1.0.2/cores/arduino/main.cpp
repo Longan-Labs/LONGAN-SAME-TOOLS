@@ -47,6 +47,7 @@ int main( void )
   USBDevice.attach();
 #endif
 
+  DAC->CTRLB.reg = DAC_CTRLB_REFSEL_VDDANA;
   setup();
 
   for (;;)
