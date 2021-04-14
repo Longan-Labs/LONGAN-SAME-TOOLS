@@ -68,7 +68,8 @@ regs :
         using values from AT6493 (SAMC21 app note); the plus values are to add on what the MCAN driver subtracts back off
         */
         bit_rate :
-        speedset,
+        //speedset,
+        500000,
         quanta_before_sp : 10 + 2,
         quanta_after_sp : 3 + 1,
 
@@ -77,9 +78,11 @@ regs :
                 the maximum peripheral clock of 48MHz on the SAMC21 does restrict us from very high rates
         */
         bit_rate_fd :
-        speedset,
-        quanta_before_sp_fd : 10 + 2,
-        quanta_after_sp_fd : 3 + 1,
+        //speedset,
+        //CAN_1000KBPS,
+        4000000,
+        quanta_before_sp_fd : 3,       // 10+2
+        quanta_after_sp_fd : 1,         // 3+1
 
         quanta_sync_jump : 3 + 1,
         quanta_sync_jump_fd : 3 + 1,
@@ -136,11 +139,37 @@ regs :
     return CAN_FAIL;
 };
 
-#if 0
-uint8_t SAME51_CAN::begin(uint8_t idmodeset, uint32_t speedset, uint8_t clockset)
+
+uint8_t SAME51_CAN::begin_fd(uint8_t idmodeset, uint32_t speedset, enum mcan_can_mode canmode)
 {
     uint8_t ret;
+    
+    unsigned long speed1[14] = {0, 125000, 250000, 250000, 250000, 250000,
+                                   250000, 250000, 250000, 500000, 500000,
+                                   500000, 500000, 1000000,
+                               };
+        
+    unsigned long speed2[14] = {0, 500000, 500000, 750000, 1000000, 1500000,
+                                   2000000, 3000000, 4000000, 1000000, 2000000,
+                                   3000000, 4000000, 4000000,
+                               };
+                                   
+    unsigned long speedset1 = speed1[speedset];
+    unsigned long speedset2 = speed2[speedset];
+        
+
+    rx_ded_buffer_data = false;
+    _canid = ID_CAN0;
+    _cantx = 22;
+    _canrx = 23;
+    _group = 0;
     _idmode = idmodeset;
+    
+    if (_canid == ID_CAN0) {
+        same51_can_use_object[0] = this;
+    }
+    
+    
     if ((_canid != ID_CAN0)) {
         return CAN_FAIL;  // Don't know what this is
     }
@@ -176,8 +205,10 @@ regs :
         /*
         using values from AT6493 (SAMC21 app note); the plus values are to add on what the MCAN driver subtracts back off
         */
+        
+
         bit_rate :
-        speedset,
+        speedset1,
         quanta_before_sp : 10 + 2,
         quanta_after_sp : 3 + 1,
 
@@ -186,9 +217,9 @@ regs :
                 the maximum peripheral clock of 48MHz on the SAMC21 does restrict us from very high rates
         */
         bit_rate_fd :
-        speedset,
-        quanta_before_sp_fd : 10 + 2,
-        quanta_after_sp_fd : 3 + 1,
+        speedset2,
+        quanta_before_sp_fd : 3,       // 10+2
+        quanta_after_sp_fd : 1,         // 3+1
 
         quanta_sync_jump : 3 + 1,
         quanta_sync_jump_fd : 3 + 1,
@@ -226,7 +257,7 @@ regs :
     } else {
         mcan_loopback_off(&mcan);
     }
-    mcan_set_mode(&mcan, MCAN_MODE_EXT_LEN_CONST_RATE);
+    mcan_set_mode(&mcan, canmode);
     mcan_enable(&mcan);
     // Enable chip standby
     //pinMode(_cs, OUTPUT);
@@ -243,8 +274,8 @@ regs :
     }
     Serial.println("Something went wrong!!!!!!!!");
     return CAN_FAIL;
-};
-#endif
+}
+
 
 uint8_t SAME51_CAN::init_Mask(uint8_t num, uint8_t ext, uint32_t ulData)
 {

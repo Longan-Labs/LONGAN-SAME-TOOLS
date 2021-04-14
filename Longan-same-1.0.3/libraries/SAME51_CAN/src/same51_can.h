@@ -82,6 +82,7 @@ public:
     */
 
     uint8_t begin(uint8_t idmodeset, uint32_t speedset, enum mcan_can_mode canmode);
+    uint8_t begin_fd(uint8_t idmodeset, uint32_t speedset, enum mcan_can_mode canmode);
     uint8_t init_Mask(uint8_t num, uint8_t ext, uint32_t ulData);              // Initilize Mask(s)
     uint8_t init_Mask(uint8_t num, uint32_t ulData);                          // Initilize Mask(s)
     uint8_t init_Filt(uint8_t num, uint8_t ext, uint32_t ulData);              // Initilize Filter(s)

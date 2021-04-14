@@ -50,7 +50,7 @@ Atmel's SAMC21 register definition include files have a different and peculiar s
  *----------------------------------------------------------------------------*/
 #include <sam.h>
 #include <stdbool.h>
-
+#include "Arduino.h"
 #include "mcan.h"
 //#include "pmc.h"
 
@@ -244,18 +244,34 @@ uint8_t mcan_initialize(struct mcan_set *set, const struct mcan_config *cfg)
 	    || cfg->quanta_after_sp < 1 || cfg->quanta_after_sp > 128
 	    || cfg->quanta_sync_jump < 1 || cfg->quanta_sync_jump > 128)
 		return 2;
+        
 	/* Retrieve the frequency of the CAN core clock i.e. the Generated Clock */
-	freq = pmc_get_gck_clock(cfg->id);
+	freq = pmc_get_gck_clock(cfg->id);          // 48Mhz
+    Serial.print("freq = ");
+    Serial.println(freq);
 	/* Compute the Nominal Baud Rate Prescaler */
 	regVal32 = ROUND_INT_DIV(freq, cfg->bit_rate
 	    * (cfg->quanta_before_sp + cfg->quanta_after_sp));
+        
+    Serial.print("regVal32 = ");
+    Serial.println(regVal32);                   // 500kbps -> 6
+    
 	if (regVal32 < 1 || regVal32 > 512)
 		return 3;
+    
 	/* Apply bit timing configuration */
 	mcan->NBTP.reg = CAN_NBTP_NBRP(regVal32 - 1)
 	    | CAN_NBTP_NTSEG1(cfg->quanta_before_sp - 1 - 1)
 	    | CAN_NBTP_NTSEG2(cfg->quanta_after_sp - 1)
 	    | CAN_NBTP_NSJW(cfg->quanta_sync_jump - 1);
+        
+    unsigned long tmpp = CAN_NBTP_NBRP(regVal32 - 1)
+	    | CAN_NBTP_NTSEG1(cfg->quanta_before_sp - 1 - 1)
+	    | CAN_NBTP_NTSEG2(cfg->quanta_after_sp - 1)
+	    | CAN_NBTP_NSJW(cfg->quanta_sync_jump - 1);
+        
+    Serial.print("NBTP = ");
+    Serial.println(tmpp, HEX);
 
 	/* Configure fast CAN FD bit timing */
 	if (cfg->bit_rate_fd < cfg->bit_rate
@@ -266,6 +282,10 @@ uint8_t mcan_initialize(struct mcan_set *set, const struct mcan_config *cfg)
 	/* Compute the Fast Baud Rate Prescaler */
 	regVal32 = ROUND_INT_DIV(freq, cfg->bit_rate_fd
 	    * (cfg->quanta_before_sp_fd + cfg->quanta_after_sp_fd));
+
+    Serial.print("regVal32 = ");
+    Serial.println(regVal32);               // 1Mbps -> 3
+    
 	if (regVal32 < 1 || regVal32 > 32)
 		return 5;
 	/* Apply bit timing configuration */
@@ -273,6 +293,14 @@ uint8_t mcan_initialize(struct mcan_set *set, const struct mcan_config *cfg)
 	    | CAN_DBTP_DTSEG1(cfg->quanta_before_sp_fd - 1 - 1)
 	    | CAN_DBTP_DTSEG2(cfg->quanta_after_sp_fd - 1)
 	    | CAN_DBTP_DSJW(cfg->quanta_sync_jump_fd - 1);
+        
+    tmpp = CAN_DBTP_DBRP(regVal32 - 1)
+	    | CAN_DBTP_DTSEG1(cfg->quanta_before_sp_fd - 1 - 1)
+	    | CAN_DBTP_DTSEG2(cfg->quanta_after_sp_fd - 1)
+	    | CAN_DBTP_DSJW(cfg->quanta_sync_jump_fd - 1);
+        
+    Serial.print("DBTP = ");
+    Serial.println(tmpp, HEX);
 
 	/* Configure Message RAM starting addresses and element count */
 	/* 11-bit Message ID Rx Filters */
