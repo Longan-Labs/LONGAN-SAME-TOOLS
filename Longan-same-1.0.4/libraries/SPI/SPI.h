@@ -72,7 +72,7 @@ class SPISettings {
   }
 
   // Default speed set to 4MHz, SPI mode set to MODE 0 and Bit order set to MSB first.
-  SPISettings() { init_AlwaysInline(4000000, MSBFIRST, SPI_MODE0); }
+  SPISettings() { init_AlwaysInline(250000, MSBFIRST, SPI_MODE0); }
 
   private:
   void init_MightInline(uint32_t clock, BitOrder bitOrder, uint8_t dataMode) {
@@ -202,10 +202,10 @@ class SPIClass {
 
 // For compatibility with sketches designed for AVR @ 16 MHz
 // New programs should use SPI.beginTransaction to set the SPI clock
-#define SPI_CLOCK_DIV2   (MAX_SPI * 2 / 8000000)
-#define SPI_CLOCK_DIV4   (MAX_SPI * 2 / 4000000)
-#define SPI_CLOCK_DIV8   (MAX_SPI * 2 / 2000000)
-#define SPI_CLOCK_DIV16  (MAX_SPI * 2 / 1000000)
+#define SPI_CLOCK_DIV2   (MAX_SPI * 2 / 8000000)        // 12
+#define SPI_CLOCK_DIV4   (MAX_SPI * 2 / 4000000)        // 6
+#define SPI_CLOCK_DIV8   (MAX_SPI * 2 / 2000000)        // 3
+#define SPI_CLOCK_DIV16  (MAX_SPI * 2 / 1000000)        // 
 #define SPI_CLOCK_DIV32  (MAX_SPI * 2 / 500000)
 #define SPI_CLOCK_DIV64  (MAX_SPI * 2 / 250000)
 #define SPI_CLOCK_DIV128 (MAX_SPI * 2 / 125000)

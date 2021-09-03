@@ -68,8 +68,8 @@ regs :
         using values from AT6493 (SAMC21 app note); the plus values are to add on what the MCAN driver subtracts back off
         */
         bit_rate :
-        //speedset,
-        500000,
+        speedset,
+        //500000,
         quanta_before_sp : 10 + 2,
         quanta_after_sp : 3 + 1,
 
@@ -78,9 +78,9 @@ regs :
                 the maximum peripheral clock of 48MHz on the SAMC21 does restrict us from very high rates
         */
         bit_rate_fd :
-        //speedset,
+        speedset,
         //CAN_1000KBPS,
-        4000000,
+        //4000000,
         quanta_before_sp_fd : 3,       // 10+2
         quanta_after_sp_fd : 1,         // 3+1
 
