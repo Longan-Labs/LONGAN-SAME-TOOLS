@@ -127,6 +127,7 @@ void SERCOM7_0_Handler           ( void ) __attribute__ ((weak, alias("Dummy_Han
 void SERCOM7_1_Handler           ( void ) __attribute__ ((weak, alias("Dummy_Handler")));
 void SERCOM7_2_Handler           ( void ) __attribute__ ((weak, alias("Dummy_Handler")));
 void SERCOM7_3_Handler           ( void ) __attribute__ ((weak, alias("Dummy_Handler")));
+void CAN0_Handler                ( void ) __attribute__ ((weak, alias("Dummy_Handler")));
 void USB_0_Handler               ( void ) __attribute__ ((weak));
 void USB_1_Handler               ( void ) __attribute__ ((weak));
 void USB_2_Handler               ( void ) __attribute__ ((weak));
@@ -294,7 +295,7 @@ __attribute__ ((section(".isr_vector"))) const DeviceVectors exception_table =
 	  (void*) SERCOM7_1_Handler,             /* 75 Serial Communication Interface 7 IRQ 1 */
 	  (void*) SERCOM7_2_Handler,             /* 76 Serial Communication Interface 7 IRQ 2 */
 	  (void*) SERCOM7_3_Handler,             /* 77 Serial Communication Interface 7 IRQ 3 */
-	  (void*) (0UL),
+	  (void*) CAN0_Handler,                  /* 78 Controller Area NetWork 0 */
 	  (void*) (0UL),
 	  (void*) USB_0_Handler,                 /* 80 Universal Serial Bus IRQ 0 */
 	  (void*) USB_1_Handler,                 /* 81 Universal Serial Bus IRQ 1 */
